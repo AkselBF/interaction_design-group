@@ -1,0 +1,20 @@
+
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+/*Body (For every page)*/
+body {
+  background-color: #ffffff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, h1, h2, h3, h4, p {
+  font-family: 'Raleway', sans-serif;
+}

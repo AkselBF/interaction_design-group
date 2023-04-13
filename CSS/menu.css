@@ -1,0 +1,225 @@
+
+/*
+  Top navigation bar (white)
+*/
+
+.navbar {
+  background-color: #222222;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1px 10px 1px 10px;
+  z-index: 100;
+}
+
+/*logo*/
+.logo {
+  display: inline-block;
+  /*width: 155px;*/
+  height: 53px;
+  margin-left: 25px;
+  margin: 7px 0 5px 5px;
+  border-radius: 10px;
+}
+
+/*Back logo*/
+.fa-arrow-left-long {
+  display: inline-block;
+  color: #222222;
+  margin: 7px 0 7px 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+/*Keyframes and hover effect for back button*/
+@keyframes return {
+  0% {
+    margin-left: 15px;
+  }
+
+  50% {
+    margin-left: 5px;
+  }
+
+  100% {
+    margin-left: 15px;
+  }
+}
+
+.fa-arrow-left-long:hover {
+  animation: return 1s infinite;
+}
+
+.navi {
+  height: 40%;
+  width: 300px;
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(34, 34, 34, 0.95);
+  right: 0;
+  top: 72px;
+  z-index: 100;
+}
+
+.navi {
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  padding: 25px 50px 25px 50px;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  border-radius: 10px;
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu li:hover {
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+/*Media querries for menu (For mobile)*/
+@media (max-width: 999px) {
+  .navbar {
+    padding: 0 10px 0 10px;
+  }
+
+  .navi {
+    height: 565px;
+    top: 88px;
+  }
+
+  .logo {
+    /*width: 200px;*/
+    height: 73px;
+  }
+
+  .fa-arrow-left-long {
+    margin: 12px 0 12px 15px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .menu a {
+    font-size: 30px;
+    margin: 15px 10px 15px 0;
+  }
+
+  .menu a:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu {
+    list-style: none;
+    float: right;
+  }
+
+  .menu li {
+    float: left;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  float: right;
+  padding: 35px 20px 35px 20px;
+}
+
+.burgerline {
+  background: #ffffff;
+  display: block;
+  height: 4px;
+  position: relative;
+  width: 35px;
+  border-radius: 10px;
+}
+
+.burgerline::before,
+.burgerline::after {
+  background:#ffffff;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+}
+
+.burgerline::before {
+  top: 10px;
+  border-radius: 10px;
+}
+
+.burgerline::after {
+  top: -10px;
+  border-radius: 10px;
+}
+
+/*Media querries for the menu burgerlines*/
+@media (max-width: 999px) {
+  .burgerline {
+    height: 8px;
+    width: 60px;
+    top: 5px;
+  }
+
+  .burgerline::before {
+    top: 20px;
+  }
+
+  .burgerline::after {
+    top: -20px;
+  }
+}
+
+.burgermenu {
+  display: none;
+}
+
+.burgermenu:checked ~ nav {
+  max-height: 100%;
+}
+
+.burgermenu:checked ~ .icon .burgerline {
+  background: transparent;
+}
+
+.burgermenu:checked ~ .icon .burgerline::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.burgermenu:checked ~ .icon .burgerline::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*Media querries for menu change with width*/
+@media (min-width: 1000px) {
+  .navi {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    z-index: 100;
+  }
+
+  .menu li {
+    float: left;
+  }
+
+  .menu a:hover {
+    background-color: transparent;
+  }
+
+  .icon {
+    display: none;
+  }
+}

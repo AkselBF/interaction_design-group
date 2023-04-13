@@ -1,0 +1,177 @@
+@import url(menu.css);
+@import url(general.css);
+
+/*
+  Upper image section
+*/
+.image {
+  width: 100%;
+  background: linear-gradient(#EA5321 75%, #000000a0 25%);
+  background-color: #EA5321;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.top_image {
+  width: 100vw;
+  object-fit: cover;
+  opacity: 50%;
+  object-position: 0 20%;
+}
+
+.top_description {
+  position: absolute;
+  color: #ffffff;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  width: 350px;
+}
+
+.top_text {
+  font-size: 2.5vw;
+  margin: 10px auto 20px auto;
+}
+
+.top_button {
+  position: absolute;
+  margin: auto;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  border: solid 2px #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 3px 30px 3px 30px;
+}
+
+.button_text {
+  color: #ffffff;
+  font-size: 2.5vw;
+}
+
+@media (min-width: 1085px) {
+  .button {
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+  }
+
+  .button_text {
+    font-size: 1.5vw;
+  }
+}
+
+/*
+  News section
+*/
+.news_title {
+  text-align: center;
+  color: #EA5321;
+  margin: 20px auto 50px auto;
+}
+
+.news {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.news_cards {
+  margin:  auto auto 60px auto;
+  width: 300px;
+}
+
+.news_card_image {
+  width: 300px;
+}
+
+.news_card_title {
+  margin: 5px auto 10px auto;
+}
+
+.news_card_text {
+  margin: 5px auto 20px auto;
+}
+
+.news_button {
+  margin: 20px auto 5px auto;
+  border: solid 1px #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  display: block;
+  color: #000000;
+}
+
+@media (min-width: 999px) {
+  .news {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .news_cards {
+    margin: auto auto 50px auto;
+  }
+}
+
+/*
+  Images section
+*/
+
+.images {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto auto auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #222222;
+  overflow: hidden;
+}
+
+.images_image {
+  width: 300px;
+  margin: auto;
+}
+
+@media (min-width: 999px) {
+  .images {
+    flex-direction: row;
+  }
+
+  .images_image {
+    margin: 0 0 0 0;
+    width: 300px;
+  }
+}
+
+/*
+  Contact section
+*/
+footer {
+  background-color: #222222;
+}
+.contact {
+  color: #ffffff;
+  justify-content: center;
+  margin: auto;
+  padding: 20px 0 60px 0;
+  width: 80%;
+}
+
+.contact_title, .contact_soh, .soh_info, 
+.soh_info_number, .soh_info_mail{
+  font-weight: bold;
+  margin: 10px auto 10px auto;
+}
+
+.contact_info_number {
+  display: inline;
+}
