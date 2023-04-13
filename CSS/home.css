@@ -56,6 +56,16 @@
   font-size: 2.5vw;
 }
 
+.button:hover {
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+.button_text:hover {
+  color: #222222;
+  transition: 0.5s;
+}
+
 @media (min-width: 1085px) {
   .button {
     padding: 10px 40px 10px 40px;
@@ -110,6 +120,12 @@
   color: #000000;
 }
 
+.news_button:hover {
+  background-color: #222222;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
 @media (min-width: 999px) {
   .news {
     flex-direction: row;
@@ -158,20 +174,47 @@
 footer {
   background-color: #222222;
 }
+
 .contact {
   color: #ffffff;
   justify-content: center;
   margin: auto;
-  padding: 20px 0 60px 0;
+  padding: 60px 0 60px 0;
   width: 80%;
+}
+
+.contact_parts {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_first, .contact_second, .contact_third {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .contact_title, .contact_soh, .soh_info, 
 .soh_info_number, .soh_info_mail{
   font-weight: bold;
-  margin: 10px auto 10px auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+.contact_title {
+  text-align: center;
+  margin-bottom: 40px;
+} 
 
 .contact_info_number {
   display: inline;
+}
+
+@media (min-width: 999px) {
+  .contact_parts {
+    flex-direction: row;
+  }
+
+  .contact_first, .contact_second, .contact_third {
+    margin: 10px auto 30px auto;
+  }
 }
